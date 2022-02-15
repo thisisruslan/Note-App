@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.screen.InfoEditNoteScreen">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBackground">
+
+            <ImageView
+                android:id="@+id/buttonBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:padding="8dp"
+                android:src="@drawable/ic_baseline_arrow_back_24" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editTitle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:maxLength="24"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                tools:text="previous title" />
+
+            <ImageView
+                android:id="@+id/buttonDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="8dp"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:padding="8dp"
+                android:src="@drawable/ic_baseline_delete_24" />
+
+            <ImageView
+                android:id="@+id/buttonPin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="8dp"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:padding="8dp"
+                android:src="@drawable/ic_pin" />
+
+
+            <TextView
+                android:id="@+id/buttonSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="8dp"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Save"
+                android:textColor="@color/colorRed"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <jp.wasabeef.richeditor.RichEditor
+        android:id="@+id/editor"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingHorizontal="16dp"
+        android:background="@color/white"
+        android:focusable="true"
+        android:paddingTop="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottonLine"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBar" />
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/bottonLine"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="?android:actionBarSize"
+        android:background="@drawable/bg_bottom_appbar"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/buttonTextStyleBold"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="4dp"
+            android:layout_weight="1"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:src="@drawable/ic_bold_format" />
+
+        <ImageView
+            android:id="@+id/buttonTextStyleItalic"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="4dp"
+            android:layout_weight="1"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:src="@drawable/ic_italic_format" />
+
+        <ImageView
+            android:id="@+id/buttonTextStyleunderline"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="4dp"
+            android:layout_weight="1"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:src="@drawable/ic_underline_format" />
+
+        <ImageView
+            android:id="@+id/buttonStrikeThrough"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="4dp"
+            android:layout_weight="1"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:src="@drawable/ic_baseline_strikethrough_s_24" />
+
+        <ImageView
+            android:id="@+id/buttonColorPicker"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="4dp"
+            android:layout_weight="1"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:src="@drawable/ic_color_picker" />
+
+        <ImageView
+            android:id="@+id/buttonBackgroundText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="4dp"
+            android:layout_weight="1"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:src="@drawable/ic_text_bacground" />
+
+        <ImageView
+            android:id="@+id/buttonUndo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="4dp"
+            android:layout_weight="1"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:src="@drawable/ic_baseline_undo_24" />
+
+        <ImageView
+            android:id="@+id/buttonRedo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="4dp"
+            android:layout_weight="1"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:src="@drawable/ic_baseline_redo_24" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My Notes</string>
+    <string name="Unpin">Unpin</string>
+    <string name="Pin">Pin</string>
+</resources>
